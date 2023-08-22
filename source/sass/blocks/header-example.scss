@@ -1,0 +1,229 @@
+.header-example {
+  padding: 34px 0;
+  z-index: 30;
+  transition: opacity $trans-default;
+
+  @media (max-width: 1023px) {
+    padding: 30px 0;
+  }
+
+  @media (max-width: 767px) {
+    padding: 20px 0;
+  }
+
+  &.is-open {
+    .logo {
+      opacity: 0;
+    }
+  }
+
+  &.is-hidden {
+    transform: translateY(-100%);
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    flex-grow: 1;
+    margin-left: 496px;
+
+    @media (max-width: 1365px) {
+      margin-left: 337px;
+    }
+
+    @media (max-width: 1220px) {
+      margin-left: 237px;
+    }
+
+    @media (max-width: 1023px) {
+      margin-left: 137px;
+    }
+
+    @media (max-width: 767px) {
+      background-color: $color-default-white;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      left: 0;
+      opacity: 0;
+      margin: 0;
+      padding: 84px 20px 20px 25px;
+      position: fixed;
+      pointer-events: none;
+      top: 0;
+      transition: background-color 0.3s ease;
+      right: 0;
+      visibility: hidden;
+      z-index: 20;
+    }
+
+    .is-open & {
+      opacity: 1;
+      pointer-events: all;
+      visibility: visible;
+      margin-left: 36px;
+      height: 100vh;
+
+      .header-example__item {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__list {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      margin: 0 0 70px 0;
+      max-width: unset;
+    }
+
+    @media (max-width: 767px) {
+      align-items: flex-start;
+      margin: 0 0 62px 0;
+    }
+  }
+
+  &__item {
+    margin: 0;
+
+    @media (max-width: 767px) {
+      opacity: 0;
+      transition: opacity $trans-default;
+      transform: translateX(-15px);
+    }
+
+    &:not(:last-child) {
+      margin: 0 25px 0 0;
+
+      @media (max-width: 1023px) {
+        margin: 0;
+      }
+
+      @media (max-width: 767px) {
+        margin: 0 0 28px 0;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.5px;
+    transition: opacity $trans-default;
+
+    @media (max-width: 1023px) {
+      font-size: 14px;
+      line-height: 17.07px;
+    }
+
+    @media (max-width: 767px) {
+      color: $color-tangaroa;
+      font-size: 18px;
+      line-height: 21.94px;
+    }
+  }
+
+  &__burger {
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    display: none;
+    padding: 0;
+    position: relative;
+    z-index: 25;
+
+    @media (max-width: 767px) {
+      display: flex;
+      position: relative;
+      transition: opacity $trans-default;
+    }
+
+    .is-open {
+      .header-example__burger-open {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity $trans-default;
+      }
+
+      .header-example__burger-close {
+        opacity: 1;
+        pointer-events: all;
+        transition: opacity $trans-default;
+      }
+    }
+  }
+
+  &__burger-open {
+    width: 24px;
+    height: 12px;
+    transition: opacity 0.3s ease 0.1s;
+    cursor: pointer;
+
+    .is-open & {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease 0s;
+    }
+  }
+
+  &__burger-close {
+    width: 13px;
+    height: 13px;
+    stroke: #ffffff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    position: absolute;
+    right: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    .is-open & {
+      opacity: 1;
+      pointer-events: all;
+      transition: opacity $trans-default;
+    }
+  }
+}
+
+.section-example {
+  height: 100vh;
+}
+
+.header-example.is-open::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc(100% + 36px);
+  height: 100%;
+  background: $color-tangaroa;
+  opacity: 0.3;
+}
+
+.header-example__logo {
+  z-index: 100;
+  display: none;
+
+  .is-open & {
+    display: inline-block;
+    opacity: 1;
+    position: absolute;
+    left: 61px;
+  }
+}

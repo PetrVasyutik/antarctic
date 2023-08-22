@@ -1,0 +1,48 @@
+.contacts-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-info__text {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  margin-bottom: 32px;
+
+  @media (max-width: 1023px) {
+    margin-bottom: 27px;
+  }
+}
+
+.contacts-info__adress {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 22px;
+
+  @media (max-width: 1023px) {
+    align-items: flex-start;
+  }
+}
+
+.contacts-info__phone {
+  color: $color-tangaroa;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.contacts-info__icon {
+  width: 18px;
+  height: 22px;
+  flex-shrink: 0;
+}

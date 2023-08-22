@@ -1,0 +1,73 @@
+.main-block {
+  background-color: $color-tangaroa;
+  color: $color-default-white;
+  background-image: url("../img/fon.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -105px;
+  background-position-y: 0;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/fon@2x.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: 794px) {
+    background-image: url("../img/fontablet.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 6px;
+    background-position-x: -20px;
+  }
+
+  @media (max-width: 767px) {
+    background-position-y: 60px;
+    background-position-x: 0;
+    margin-top: -120px;
+  }
+
+  @media (max-width: 467px) {
+    background-position-y: 60px;
+    background-position-x: -145px;
+    margin-top: -120px;
+  }
+}
+
+.main-block__wrapper {
+  padding-top: 270px;
+  padding-bottom: 280px;
+  padding-left: 198px;
+
+  @media (max-width: 1023px) {
+    padding-top: 295px;
+    padding-bottom: 273px;
+    padding-left: 45px;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 235px;
+    padding-bottom: 177px;
+    padding-left: 15px;
+  }
+}
+
+.main-block__subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24.38px;
+  margin-top: 11px;
+
+  @media (max-width: 1023px) {
+    font-size: 18px;
+    line-height: 21.94px;
+    margin-top: 12px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+    line-height: 22.4px;
+    margin-top: 11px;
+    padding-right: 60px;
+  }
+}
