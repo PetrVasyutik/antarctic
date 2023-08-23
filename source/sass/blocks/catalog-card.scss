@@ -4,6 +4,7 @@
   margin: 0 auto;
   max-width: 260px;
   height: 100%;
+  padding-top: calc(100% * 386 / 260);
 
   &:hover {
     .catalog-card__front {
@@ -15,17 +16,20 @@
   @media (max-width: 1023px) {
     max-width: 309px;
     max-height: 386px;
+    padding-top: calc(100% * 386 / 309);
   }
 
   @media (max-width: 767px) {
     max-width: 270px;
-    min-height: 386px;
+    max-height: 386px;
+    padding-top: calc(100% * 386 / 270);
   }
 }
 
 .catalog-card__front {
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   z-index: 2;
@@ -34,13 +38,16 @@
   img {
     height: 100%;
     width: 100%;
+    object-fit: cover;
   }
 }
 
 .catalog-card__back {
   display: flex;
   flex-direction: column;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   color: $color-default-white;
   background-color: $color-tangaroa;
   padding: 17px 23px 35px 23px;
@@ -62,6 +69,7 @@
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
+  overflow-y: auto;
 
   &--front {
     position: absolute;
@@ -90,8 +98,10 @@
 .catalog-card__key {
   font-weight: 600;
   margin-bottom: 2px;
+  overflow-y: auto;
 }
 
 .catalog-card__value {
   margin-bottom: 11px;
+  overflow-y: auto;
 }
