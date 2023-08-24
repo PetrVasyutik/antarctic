@@ -86,19 +86,19 @@
 }
 
 .catalog-card__title-back {
-    color: $color-default-white;
-    margin-top: 10px;
-    padding-left: 0;
-    margin-bottom: 14px;
+  color: $color-default-white;
+  margin-top: 10px;
+  padding-left: 0;
+  margin-bottom: 14px;
 
-    @media (max-width: 1023px) {
-      line-height: 27px;
-    }
-
-    @media (max-width: 767px) {
-      line-height: 27px;
-    }
+  @media (max-width: 1023px) {
+    line-height: 27px;
   }
+
+  @media (max-width: 767px) {
+    line-height: 27px;
+  }
+}
 
 .catalog-card__key {
   font-weight: 600;
