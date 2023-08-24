@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Описание проекта">
     <title>Круизы в Антарктику</title>
-    <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font">
-    <link rel="preload" href="./fonts/Montserrat-Medium.woff2" as="font">
-    <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font">
-    <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font">
+    <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font">
+    <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font">
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font">
+    <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font">
+    <link rel="preload" href="fonts/Montserrat-Regular.woff" as="font">
+    <link rel="preload" href="fonts/Montserrat-Medium.woff" as="font">
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff" as="font">
+    <link rel="preload" href="fonts/Montserrat-Bold.woff" as="font">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -17,10 +21,7 @@
       <header class="header-example" data-header>
         <div class="container">
           <a class="logo" href="/" aria-label="Переход на главную страницу">
-            <picture>
-              <source media="(max-width: 1023px)" srcset="img/svg/logo-tablet.svg">
-              <img src="img/svg/logo.svg" alt="Логотип Круизы в Антарктику">
-            </picture>
+            <img src="img/svg/logo.svg" width="70" height="38" alt="Логотип Круизы в Антарктику.">
           </a>
           <nav class="header-example__nav">
             <ul class="header-example__list">
@@ -39,15 +40,13 @@
             </ul>
           </nav>
           <a class="header-example__logo" href="/" aria-label="Переход на главную страницу">
-            <picture>
-              <img src="img/svg/logo-dark.svg" alt="Логотип Круизы в Антарктику">
-            </picture>
+            <img src="img/svg/logo-dark.svg" width="42" height="22" alt="Логотип Круизы в Антарктику.">
           </a>
           <button class="header-example__burger" type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-burger>
-            <svg class="header-example__burger-open">
+            <svg class="header-example__burger-open" widht="24" height="12">
               <use xlink:href="img/sprite.svg#icon-open"></use>
             </svg>
-            <svg class="header-example__burger-close" aria-hidden="true">
+            <svg class="header-example__burger-close" aria-hidden="true" widht="13" height="13">
               <use xlink:href="img/sprite.svg#icon-close"></use>
             </svg>
           </button>
@@ -70,20 +69,20 @@
             </div>
             <div class="journey__image">
               <picture>
-                <source srcset="./img/penguins.webp" type="image/webp">
-                  <img src="./img/penguins.jpg" srcset="./img/penguins1@2x.jpg 2x" alt="Три пингвина">
+                <source srcset="img/penguins.webp" srcset="img/penguins@2x.webp 2x" type="image/webp">
+                  <img src="img/penguins.jpg" srcset="img/penguins1@2x.jpg 2x" width="500" height="301" alt="Три пингвина.">
               </picture>
             </div>
           </div>
         </section>
-        <section class="advantages advantages__wrapper" id="1">
+        <section class="advantages" id="1">
           <div class="container">
             <h2 class="advantages__title">Преимущества</h2>
             <ul class="advantages__list">
               <li class="advantages__item advantage">
                 <picture>
                   <source media="(max-width: 1023px)" srcset="img/svg/liner-tablet.svg">
-                  <img src="img/svg/liner.svg" alt="Морской лайнер">
+                  <img src="img/svg/liner.svg">
                 </picture>
                 <h3 class="advantage__title">Небольшой круизный лайнер</h3>
                 <span class="advantage__text">Круизный лайнер, рассчитанный всего лишь на&nbsp;300&nbsp;гостей, поможет избежать шума и&nbsp;очередей и&nbsp;даст возможность насладиться видами и&nbsp;природой.</span>
@@ -91,7 +90,7 @@
               <li class="advantages__item advantage">
                 <picture>
                   <source media="(max-width: 1023px)" srcset="img/svg/all-inclusive-tablet.svg">
-                  <img src="img/svg/all-inclusive.svg" alt="Значок все включено">
+                  <img src="img/svg/all-inclusive.svg">
                 </picture>
                 <h3 class="advantage__title">Система все&nbsp;включено</h3>
                 <span class="advantage__text">Все наши круизы работают по&nbsp;системе &laquo;Все Включено&raquo;. Великолепные блюда и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.</span>
@@ -99,7 +98,7 @@
               <li class="advantages__item advantage">
                 <picture>
                   <source media="(max-width: 1023px)" srcset="img/svg/tur-tablet.svg">
-                  <img src="img/svg/tur.svg" alt="Морской корабль">
+                  <img src="img/svg/tur.svg">
                 </picture>
                 <h3 class="advantage__title">Экскурсионные туры на Zodiac</h3>
                 <span class="advantage__text">Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на&nbsp;оборудованных лодках типа Zodiac c&nbsp;опытными экскурсоводами.</span>
@@ -114,7 +113,7 @@
               <li class="catalog__item">
                 <article class="catalog-card">
                   <div class="catalog-card__back">
-                    <div class="catalog-card__title catalog-card__title--back">Круиз “Астория”</div>
+                    <h3 class="catalog-card__title-back">Круиз “Астория”</h3>
                     <div class="catalog-card__key">Маршрут</div>
                     <div class="catalog-card__value">Аргентина - Фолклендские острова - Антарктида</div>
                     <div class="catalog-card__key">Порт отправления</div>
@@ -123,16 +122,16 @@
                     <div class="catalog-card__value">11 дней</div>
                     <div class="catalog-card__key">Цена</div>
                     <div class="catalog-card__value">от 11500 $</div>
-                    <div class="btn__container">
+                    <div class="container-btn">
                       <a class="btn btn--back" href="#">Забронировать</a>
                     </div>
                   </div>
                   <div class="catalog-card__front">
                     <picture>
-                      <source srcset="img/astoria.webp" type="image/webp">
-                      <img src="img/astoria.jpg" srcset="img/astoria@2x.jpg 2x" alt="Замерзшее море и ледяные горы">
+                      <source srcset="img/astoria.webp" srcset="img/astoria@2x.webp 2x" type="image/webp">
+                      <img src="img/astoria.jpg" srcset="img/astoria@2x.jpg 2x" width="260" height="386" alt="Замерзшее море и ледяные горы.">
                     </picture>
-                    <div class="catalog-card__title catalog-card__title--front">Круиз “Астория”</div>
+                    <h3 class="catalog-card__title-front">Круиз “Астория”</h3>
                   </div>
                 </article>
               </li>
@@ -140,13 +139,13 @@
                 <article class="catalog-card">
                   <div class="catalog-card__front">
                     <picture>
-                      <source srcset="img/astoria.webp" type="image/webp">
-                      <img src="img/astoria.jpg" srcset="img/astoria@2x.jpg 2x" alt="Замерзшее море и ледяные горы">
+                      <source srcset="img/astoria.webp" srcset="img/astoria@2x.webp 2x" type="image/webp">
+                      <img src="img/astoria.jpg" srcset="img/astoria@2x.jpg 2x" width="260" height="386" alt="Замерзшее море и ледяные горы.">
                     </picture>
-                    <div class="catalog-card__title catalog-card__title--front">Круиз “Элайн”</div>
+                    <h3 class="catalog-card__title-front">Круиз “Элайн”</h3>
                   </div>
                   <div class="catalog-card__back">
-                    <div class="catalog-card__title catalog-card__title--back">Круиз “Элайн”</div>
+                    <h3 class="catalog-card__title-back">Круиз “Элайн”</h3>
                     <div class="catalog-card__key">Маршрут</div>
                     <div class="catalog-card__value">Аргентина - Фолклендские острова - Антарктида - Чили</div>
                     <div class="catalog-card__key">Порт отправления</div>
@@ -155,7 +154,7 @@
                     <div class="catalog-card__value">20 дней</div>
                     <div class="catalog-card__key">Цена</div>
                     <div class="catalog-card__value">от 14500 $</div>
-                    <div class="btn__container">
+                    <div class="container-btn">
                       <a class="btn btn--back" href="#">Забронировать</a>
                     </div>
                   </div>
@@ -165,13 +164,13 @@
                 <article class="catalog-card">
                   <div class="catalog-card__front">
                     <picture>
-                      <source srcset="img/atlantis.webp" type="image/webp">
-                      <img src="img/atlantis.jpg" srcset="img/atlantis@2x.jpg 2x" alt="Замерзшее море и ледяные горы">
+                      <source srcset="img/atlantis.webp" srcset="img/atlantis@2x.webp 2x" type="image/webp">
+                      <img src="img/atlantis.jpg" srcset="img/atlantis@2x.jpg 2x" width="260" height="386" alt="Замерзшее море и ледяные горы.">
                     </picture>
-                    <div class="catalog-card__title catalog-card__title--front">Круиз "Атлантис"</div>
+                    <h3 class="catalog-card__title-front">Круиз "Атлантис"</h3>
                   </div>
                   <div class="catalog-card__back">
-                    <div class="catalog-card__title catalog-card__title--back">Круиз "Атлантис"</div>
+                    <h3 class="catalog-card__title-back">Круиз "Атлантис"</h3>
                     <div class="catalog-card__key">Маршрут</div>
                     <div class="catalog-card__value">Аргентина - Южная Георгия и Южные Сандвичевы Острова - Антарктида</div>
                     <div class="catalog-card__key">Порт отправления</div>
@@ -180,7 +179,7 @@
                     <div class="catalog-card__value">15 дней</div>
                     <div class="catalog-card__key">Цена</div>
                     <div class="catalog-card__value">от 14500 $</div>
-                    <div class="btn__container">
+                    <div class="container-btn">
                       <a class="btn btn--back" href="#">Забронировать</a>
                     </div>
                   </div>
@@ -190,13 +189,13 @@
                 <article class="catalog-card">
                   <div class="catalog-card__front">
                     <picture>
-                      <source srcset="img/odisha.webp" type="image/webp">
-                      <img src="img/odisha.jpg" srcset="img/odisha@2x.jpg 2x" alt="Замерзшее море и ледяные горы">
+                      <source srcset="img/odisha.webp" srcset="img/odisha@2x.webp 2x" type="image/webp">
+                      <img src="img/odisha.jpg" srcset="img/odisha@2x.jpg 2x" width="260" height="386" alt="Замерзшее море и ледяные горы.">
                     </picture>
-                    <div class="catalog-card__title catalog-card__title--front">Круиз "Одиссей"</div>
+                    <h3 class="catalog-card__title-front">Круиз "Одиссей"</h3>
                   </div>
                   <div class="catalog-card__back">
-                    <div class="catalog-card__title catalog-card__title--back">Круиз "Одиссей"</div>
+                    <h3 class="hcatalog-card__title-back">Круиз "Одиссей"</h3>
                     <div class="catalog-card__key">Маршрут</div>
                     <div class="catalog-card__value">Чили - Антарктида</div>
                     <div class="catalog-card__key">Порт отправления</div>
@@ -205,7 +204,7 @@
                     <div class="catalog-card__value">13 дней</div>
                     <div class="catalog-card__key">Цена</div>
                     <div class="catalog-card__value">от 9700 $</div>
-                    <div class="btn__container">
+                    <div class="container-btn">
                       <a class="btn btn--back" href="#">Забронировать</a>
                     </div>
                   </div>
@@ -215,13 +214,13 @@
                 <article class="catalog-card">
                   <div class="catalog-card__front">
                     <picture>
-                      <source srcset="img/olimpia.webp" type="image/webp">
-                      <img src="img/olimpia.jpg" srcset="img/olimpia@2x.jpg 2x" alt="Замерзшее море и ледяные горы">
+                      <source srcset="img/olimpia.webp" srcset="img/olimpia@2x.webp 2x" type="image/webp">
+                      <img src="img/olimpia.jpg" srcset="img/olimpia@2x.jpg 2x" width="260" height="386" alt="Замерзшее море и ледяные горы.">
                     </picture>
-                    <div class="catalog-card__title catalog-card__title--front">Круиз "Олимпия"</div>
+                    <h3 class="catalog-card__title-front">Круиз "Олимпия"</h3>
                   </div>
                   <div class="catalog-card__back">
-                    <div class="catalog-card__title catalog-card__title--back">Круиз "Олимпия"</div>
+                    <h3 class="catalog-card__title-back">Круиз "Олимпия"</h3>
                     <div class="catalog-card__key">Маршрут</div>
                     <div class="catalog-card__value">Аргентина - Фолклендские острова - Южная Георгия - Антарктида</div>
                     <div class="catalog-card__key">Порт отправления</div>
@@ -230,7 +229,7 @@
                     <div class="catalog-card__value">21 день</div>
                     <div class="catalog-card__key">Цена</div>
                     <div class="catalog-card__value">от 18600 $</div>
-                    <div class="btn__container">
+                    <div class="container-btn">
                       <a class="btn btn--back" href="#">Забронировать</a>
                     </div>
                   </div>
@@ -240,10 +239,10 @@
                 <article class="catalog-card">
                   <div class="catalog-card__front">
                     <picture>
-                      <source srcset="img/avrora.webp" type="image/webp">
-                      <img src="img/avrora.jpg" srcset="img/avrora@2x.jpg 2x" alt="Замерзшее море и ледяные горы">
+                      <source srcset="img/avrora.webp" srcset="img/avrora@2x.webp 2x" type="image/webp">
+                      <img src="img/avrora.jpg" srcset="img/avrora@2x.jpg 2x" width="260" height="386" alt="Замерзшее море и ледяные горы.">
                     </picture>
-                    <div class="catalog-card__title catalog-card__title--front">Круиз "Аврора"</div>
+                    <h3 class="catalog-card__title-front">Круиз "Аврора"</h3>
                   </div>
                   <div class="catalog-card__back">
                     <div class="catalog-card__title catalog-card__title--back">Круиз "Аврора"</div>
@@ -255,7 +254,7 @@
                     <div class="catalog-card__value">14 дней</div>
                     <div class="catalog-card__key">Цена</div>
                     <div class="catalog-card__value">от 11700 $</div>
-                    <div class="btn__container">
+                    <div class="container-btn">
                       <a class="btn btn--back" href="#">Забронировать</a>
                     </div>
                   </div>
@@ -265,13 +264,13 @@
                 <article class="catalog-card">
                   <div class="catalog-card__front">
                     <picture>
-                      <source srcset="img/leonor.webp" type="image/webp">
-                      <img src="img/leonor.jpg" srcset="img/leonor@2x.jpg 2x" alt="Замерзшее море и ледяные горы">
+                      <source srcset="img/leonor.webp" srcset="img/leonor@2x.webp 2x" type="image/webp">
+                      <img src="img/leonor.jpg" srcset="img/leonor@2x.jpg 2x" width="260" height="386" alt="Замерзшее море и ледяные горы.">
                     </picture>
-                    <div class="catalog-card__title catalog-card__title--front">Круиз "Леонор"</div>
+                    <h3 class="catalog-card__title-front">Круиз "Леонор"</h3>
                   </div>
                   <div class="catalog-card__back">
-                    <div class="catalog-card__title catalog-card__title--back">"Леонор"</div>
+                    <h3 class="catalog-card__title-back">"Леонор"</h3>
                     <div class="catalog-card__key">Маршрут</div>
                     <div class="catalog-card__value">Чили - Южная Георгия - Антарктида - Аргентина</div>
                     <div class="catalog-card__key">Порт отправления</div>
@@ -280,7 +279,7 @@
                     <div class="catalog-card__value">17 дней</div>
                     <div class="catalog-card__key">Цена</div>
                     <div class="catalog-card__value">от 12500 $</div>
-                    <div class="btn__container">
+                    <div class="container-btn">
                       <a class="btn btn--back" href="#">Забронировать</a>
                     </div>
                   </div>
@@ -290,13 +289,13 @@
                 <article class="catalog-card">
                   <div class="catalog-card__front">
                     <picture>
-                      <source srcset="img/minion.webp" type="image/webp">
-                      <img src="img/minion.jpg" srcset="img/minion@2x.jpg 2x" alt="Замерзшее море и ледяные горы">
+                      <source srcset="img/minion.webp" srcset="img/minion@2x.webp 2x" type="image/webp">
+                      <img src="img/minion.jpg" srcset="img/minion@2x.jpg 2x" width="260" height="386" alt="Замерзшее море и ледяные горы.">
                     </picture>
-                    <div class="catalog-card__title catalog-card__title--front">Круиз "Минион - 1"</div>
+                    <h3 class="catalog-card__title-front">Круиз "Минион - 1"</h3>
                   </div>
                   <div class="catalog-card__back">
-                    <div class="catalog-card__title catalog-card__title--back">"Минион - 1"</div>
+                    <h3 class="catalog-card__title-back">"Минион - 1"</h3>
                     <div class="catalog-card__key">Маршрут</div>
                     <div class="catalog-card__value">Аргентина - Антарктида</div>
                     <div class="catalog-card__key">Порт отправления</div>
@@ -305,7 +304,7 @@
                     <div class="catalog-card__value">11 дней</div>
                     <div class="catalog-card__key">Цена</div>
                     <div class="catalog-card__value">от 12300 $</div>
-                    <div class="btn__container">
+                    <div class="container-btn">
                       <a class="btn btn--back" href="#">Забронировать</a>
                     </div>
                   </div>
@@ -329,28 +328,27 @@
                     <div class="booking__form-text">Оставьте заявку и мы свяжемся с вами в ближайшее время</div>
                     <div class="custom-input" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required="data-required">
                       <label>
-                        <input required type="text" name="Имя" aria-label="name input" placeholder="Имя" />
+                        <input required type="text" name="Имя" aria-label="name input" placeholder="Имя">
                       </label>
                     </div>
                     <div class="custom-input" data-validate-type="phone" data-on-input-validate="data-on-input-validate" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required="data-required">
                       <label>
-                        <input required type="tel" name="Телефон" aria-label="Номер телефона" placeholder="Телефон" />
+                        <input required type="tel" name="Телефон" aria-label="Номер телефона" placeholder="Телефон">
                       </label>
                     </div>
                     <div class="custom-input" data-validate-type="email" data-on-input-validate="data-on-input-validate" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required="data-required">
                       <label>
-                        <input required type="email" name="Почта" aria-label="Адрес электронной почты" placeholder="Email" />
+                        <input required type="email" name="Почта" aria-label="Адрес электронной почты" placeholder="Email">
                       </label>
                     </div>
-                    <div class="booking__checkbox" data-validate-type="checkbox">
-                      <label class="checkbox">
-                        <input required type="checkbox" checked="checked" value="3" />
+                    <div class="booking__checkbox checkbox" data-validate-type="checkbox">
+                      <label>
+                        <input required type="checkbox" checked="checked" value="3">
                         <span class="checkbox__mark"></span>
                         <span class="checkbox__text">
                           Я согласен на обработку моих персональных данных
                         </span>
                       </label>
-
                     </div>
                     <button class="btn btn--form" type="submit">Оставить заявку</button>
                   </div>
@@ -361,8 +359,9 @@
         </section>
         <section class="contacts" id="3">
           <div class="container contacts__wrapper">
+            <h2 class="visually-hidden">Контакты</h2>
             <div class="contacts__map">
-              <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa28929559563fa1f118f2d7e40cb62ec64f64a80c6ed2168243afc512195c210&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+              <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa28929559563fa1f118f2d7e40cb62ec64f64a80c6ed2168243afc512195c210&amp;&amp;&amp;lang=ru_RU&amp;scroll=true"></script>
             </div>
             <div class="contacts__info contacts-info">
               <div class="contacts-info__text">У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам
@@ -389,46 +388,40 @@
       <footer class="footer">
         <div class="container">
           <div class="footer__wrapper">
-            <a class="footer-logo" href="/" aria-label="Переход на главную страницу">
-              <picture>
-                <source media="(max-width: 1023px)" srcset="img/svg/logo-tablet.svg">
-                <img src="img/svg/logo.svg" alt="Логотип Круизы в Антарктику">
-              </picture>
+            <a class="logo" href="/" aria-label="Переход на главную страницу">
+              <img src="img/svg/logo.svg" width="70" height="38" alt="Логотип Круизы в Антарктику.">
             </a>
-            <nav class="footer-nav">
-              <ul class="footer-nav__list">
-                <li class="footer-nav__item">
-                  <a class="footer-nav__link" href="#1">Преимущества</a>
+            <nav class="site-nav">
+              <ul class="site-nav__list">
+                <li class="site-nav__item">
+                  <a class="site-nav__link" href="#1">Преимущества</a>
                 </li>
-                <li class="footer-nav__item">
-                  <a class="footer-nav__link" href="#">Направления</a>
+                <li class="site-nav__item">
+                  <a class="site-nav__link" href="#">Направления</a>
                 </li>
-                <li class="footer-nav__item">
-                  <a class="footer-nav__link" href="#2">Ближайшие круизы</a>
+                <li class="site-nav__item">
+                  <a class="site-nav__link" href="#2">Ближайшие круизы</a>
                 </li>
-                <li class="footer-nav__item">
-                  <a class="footer-nav__link" href="#3">Контакты</a>
+                <li class="site-nav__item">
+                  <a class="site-nav__link" href="#3">Контакты</a>
                 </li>
               </ul>
             </nav>
-            <div class="footer-social">
-              <a class="footer-social__link" href="#">
-                <picture>
-                  <source media="(max-width: 1023px)" srcset="img/svg/ok-tablet.svg">
-                  <img src="img/svg/ok.svg" alt="Логотип Одноклассники">
-                </picture>
+            <div class="social">
+              <a class="social__link" href="#">
+                <svg class="social__icon" widht="11.75" height="20">
+                  <use xlink:href="img/sprite.svg#ok"></use>
+                </svg>
               </a>
-              <a class="footer-social__link" href="#">
-                <picture>
-                  <source media="(max-width: 1023px)" srcset="img/svg/dzen-tablet.svg">
-                  <img src="img/svg/dzen.svg" alt="Логотип Дзен">
-                </picture>
+              <a class="social__link" href="#">
+                <svg class="social__icon" widht="20" height="20">
+                  <use xlink:href="img/sprite.svg#dzen"></use>
+                </svg>
               </a>
-              <a class="footer-social__link" href="#">
-                <picture>
-                  <source media="(max-width: 1023px)" srcset="img/svg/reddit-tablet.svg">
-                  <img src="img/svg/reddit.svg" alt="Логотип Reddit">
-                </picture>
+              <a class="social__link" href="#">
+                <svg class="social__icon" widht="20" height="20">
+                  <use xlink:href="img/sprite.svg#reddit"></use>
+                </svg>
               </a>
             </div>
           </div>

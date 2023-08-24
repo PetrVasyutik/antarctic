@@ -5,6 +5,7 @@
   max-width: 260px;
   height: 100%;
   padding-top: calc(100% * 386 / 260);
+  overflow-y: auto;
 
   &:hover {
     .catalog-card__front {
@@ -64,44 +65,46 @@
   }
 }
 
-.catalog-card__title {
+.catalog-card__title-front {
   color: $color-default-white;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 27px;
-  overflow-y: auto;
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  padding-left: 30px;
 
-  &--front {
-    position: absolute;
-    bottom: 24px;
-    left: 0;
-    padding-left: 30px;
-
-    @media (max-width: 1023px) {
-      bottom: 25px;
-      padding-left: 35px;
-    }
-
-    @media (max-width: 767px) {
-      bottom: 17px;
-      padding-left: 24px;
-    }
+  @media (max-width: 1023px) {
+    bottom: 25px;
+    padding-left: 35px;
+    line-height: 27px;
   }
 
-  &--back {
+  @media (max-width: 767px) {
+    bottom: 17px;
+    padding-left: 24px;
+    line-height: 27px;
+  }
+}
+
+.catalog-card__title-back {
+    color: $color-default-white;
     margin-top: 10px;
     padding-left: 0;
     margin-bottom: 14px;
+
+    @media (max-width: 1023px) {
+      line-height: 27px;
+    }
+
+    @media (max-width: 767px) {
+      line-height: 27px;
+    }
   }
-}
 
 .catalog-card__key {
   font-weight: 600;
   margin-bottom: 2px;
-  overflow-y: auto;
 }
 
 .catalog-card__value {
   margin-bottom: 11px;
-  overflow-y: auto;
 }

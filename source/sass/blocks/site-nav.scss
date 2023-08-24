@@ -1,0 +1,40 @@
+.site-nav {
+  margin-left: 40px;
+
+  @media (max-width: 1023px) {
+    margin-left: 25px;
+  }
+
+  @media (max-width: 767px) {
+    margin-left: 0;
+    margin-top: 28px;
+  }
+}
+
+.site-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 34px;
+  padding: 0;
+
+  @media (max-width: 1023px) {
+    gap: 23px;
+    margin: 0;
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    gap: 13px;
+  }
+}
+
+.site-nav__link {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.5px;
+
+  @media (max-width: 1023px) {
+    font-size: 12px;
+    line-height: 14.63px;
+  }
+}

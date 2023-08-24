@@ -1,0 +1,31 @@
+.social {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 23px;
+  align-items: center;
+  margin-left: 347px;
+  flex-shrink: 0;
+
+  @media (max-width: 1023px) {
+    margin-left: 88px;
+    gap: 18px;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 25px;
+    margin-left: 0;
+    gap: 18px;
+    max-width: 110px;
+  }
+}
+
+.social__link {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.social__icon {
+  width: 20px;
+  height: 20px;
+}
