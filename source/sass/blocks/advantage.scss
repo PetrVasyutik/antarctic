@@ -11,6 +11,14 @@
   }
 }
 
+.advantage__icon {
+
+  @media (max-width: 1023px) {
+    width: 36px;
+    height: 26px;
+  }
+}
+
 .advantage__title {
   margin-top: 20px;
 
