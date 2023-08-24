@@ -323,10 +323,24 @@ template {
 }
 @font-face {
   font-style: normal;
+  font-weight: 400;
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff") format("woff");
+}
+@font-face {
+  font-style: normal;
   font-weight: 500;
   font-family: "Montserrat";
   font-display: swap;
   src: url("../fonts/Montserrat-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Medium.woff") format("woff");
 }
 @font-face {
   font-style: normal;
@@ -337,10 +351,24 @@ template {
 }
 @font-face {
   font-style: normal;
+  font-weight: 600;
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-style: normal;
   font-weight: 700;
   font-family: "Montserrat";
   font-display: swap;
   src: url("../fonts/Montserrat-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Bold.woff") format("woff");
 }
 *,
 *::before,
@@ -560,14 +588,6 @@ button,
           flex-grow: 1;
 }
 
-.rouble {
-  font-family: "Rouble", "Arial", sans-serif;
-  /* stylelint-disable */
-  text-transform: lowercase !important;
-  font-weight: 400 !important;
-  /* stylelint-enable */
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -679,10 +699,6 @@ button,
 }
 .btn.focus-visible:focus {
   opacity: 0.8;
-}
-
-.btn__container {
-  margin-top: auto;
 }
 
 .modal {
@@ -1546,7 +1562,7 @@ button,
   transition: opacity 0.3s ease;
   pointer-events: none;
   position: absolute;
-  right: -18px;
+  right: -72px;
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
@@ -1616,91 +1632,6 @@ button,
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
-  }
-}
-
-.footer-logo {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-}
-
-.footer-nav {
-  margin-left: 40px;
-}
-@media (max-width: 1023px) {
-  .footer-nav {
-    margin-left: 25px;
-  }
-}
-@media (max-width: 767px) {
-  .footer-nav {
-    margin-left: 0;
-    margin-top: 28px;
-  }
-}
-
-.footer-nav__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 34px;
-  padding: 0;
-}
-@media (max-width: 1023px) {
-  .footer-nav__list {
-    gap: 23px;
-    margin: 0;
-  }
-}
-@media (max-width: 767px) {
-  .footer-nav__list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 13px;
-  }
-}
-
-.footer-nav__link {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 19.5px;
-}
-@media (max-width: 1023px) {
-  .footer-nav__link {
-    font-size: 12px;
-    line-height: 14.63px;
-  }
-}
-
-.footer-social {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 23px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 347px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-}
-@media (max-width: 1023px) {
-  .footer-social {
-    margin-left: 88px;
-    gap: 18px;
-  }
-}
-@media (max-width: 767px) {
-  .footer-social {
-    margin-top: 25px;
-    margin-left: 0;
-    gap: 18px;
-    max-width: 110px;
   }
 }
 
@@ -1889,6 +1820,8 @@ button,
   background-image: url("../img/fonadvantages.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  padding-top: 110px;
+  padding-bottom: 115px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .advantages {
@@ -1897,19 +1830,14 @@ button,
     background-repeat: no-repeat;
   }
 }
-
-.advantages__wrapper {
-  padding-top: 110px;
-  padding-bottom: 115px;
-}
 @media (max-width: 1023px) {
-  .advantages__wrapper {
+  .advantages {
     padding-top: 90px;
     padding-bottom: 100px;
   }
 }
 @media (max-width: 767px) {
-  .advantages__wrapper {
+  .advantages {
     padding-top: 60px;
     padding-bottom: 60px;
   }
@@ -2042,6 +1970,7 @@ button,
   max-width: 260px;
   height: 100%;
   padding-top: 148.4615384615%;
+  overflow-y: auto;
 }
 .catalog-card:hover .catalog-card__front {
   opacity: 0;
@@ -2108,46 +2037,52 @@ button,
   }
 }
 
-.catalog-card__title {
+.catalog-card__title-front {
   color: #ffffff;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 27px;
-  overflow-y: auto;
-}
-.catalog-card__title--front {
   position: absolute;
   bottom: 24px;
   left: 0;
   padding-left: 30px;
 }
 @media (max-width: 1023px) {
-  .catalog-card__title--front {
+  .catalog-card__title-front {
     bottom: 25px;
     padding-left: 35px;
+    line-height: 27px;
   }
 }
 @media (max-width: 767px) {
-  .catalog-card__title--front {
+  .catalog-card__title-front {
     bottom: 17px;
     padding-left: 24px;
+    line-height: 27px;
   }
 }
-.catalog-card__title--back {
+
+.catalog-card__title-back {
+  color: #ffffff;
   margin-top: 10px;
   padding-left: 0;
   margin-bottom: 14px;
+}
+@media (max-width: 1023px) {
+  .catalog-card__title-back {
+    line-height: 27px;
+  }
+}
+@media (max-width: 767px) {
+  .catalog-card__title-back {
+    line-height: 27px;
+  }
 }
 
 .catalog-card__key {
   font-weight: 600;
   margin-bottom: 2px;
-  overflow-y: auto;
 }
 
 .catalog-card__value {
   margin-bottom: 11px;
-  overflow-y: auto;
 }
 
 .booking {
@@ -2318,6 +2253,8 @@ button,
 .checkbox {
   font-size: 14px;
   cursor: pointer;
+}
+.checkbox label {
   padding-top: 10px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -2331,6 +2268,12 @@ button,
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
   margin-bottom: 30px;
+}
+@media (max-width: 1023px) {
+  .checkbox label {
+    padding-top: 0;
+    margin-bottom: 10px;
+  }
 }
 .checkbox:hover {
   opacity: 0.6;
@@ -2352,14 +2295,14 @@ button,
 @media (max-width: 1023px) {
   .checkbox {
     padding-top: 0;
-    margin-bottom: 18px;
+    margin-bottom: 6px;
   }
 }
 @media (max-width: 767px) {
   .checkbox {
     margin-left: 0;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    margin-top: -3px;
+    margin-bottom: 5px;
   }
 }
 .checkbox__mark {
@@ -2554,6 +2497,114 @@ button,
   height: 22px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+}
+
+.container-btn {
+  margin-top: auto;
+}
+
+@media (max-width: 1023px) {
+  .logo {
+    width: 38px;
+    height: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .logo {
+    width: 42px;
+    height: 22px;
+  }
+}
+
+.social {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 23px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 347px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+@media (max-width: 1023px) {
+  .social {
+    margin-left: 88px;
+    gap: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .social {
+    margin-top: 25px;
+    margin-left: 0;
+    gap: 18px;
+    max-width: 110px;
+  }
+}
+
+.social__link {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.social__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.site-nav {
+  margin-left: 40px;
+}
+@media (max-width: 1023px) {
+  .site-nav {
+    margin-left: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .site-nav {
+    margin-left: 0;
+    margin-top: 28px;
+  }
+}
+
+.site-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 34px;
+  padding: 0;
+}
+@media (max-width: 1023px) {
+  .site-nav__list {
+    gap: 23px;
+    margin: 0;
+  }
+}
+@media (max-width: 767px) {
+  .site-nav__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 13px;
+  }
+}
+
+.site-nav__link {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.5px;
+}
+@media (max-width: 1023px) {
+  .site-nav__link {
+    font-size: 12px;
+    line-height: 14.63px;
+  }
 }
 
 /* @mixin hover-focus {
