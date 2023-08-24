@@ -70,7 +70,7 @@
             <div class="journey__image">
               <picture>
                 <source srcset="img/penguins.webp 1x, img/penguins@2x.webp 2x" type="image/webp">
-                  <img src="img/penguins.jpg" srcset="img/penguins1@2x.jpg 2x" width="500" height="301" alt="Три пингвина.">
+                  <img src="img/penguins.jpg" srcset="img/penguins1@2x.jpg 2x" width="560" height="301" alt="Три пингвина.">
               </picture>
             </div>
           </div>
@@ -357,16 +357,14 @@
         <section class="contacts" id="3">
           <div class="container contacts__wrapper">
             <h2 class="visually-hidden">Контакты</h2>
-            <div class="contacts__map">
-              <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa28929559563fa1f118f2d7e40cb62ec64f64a80c6ed2168243afc512195c210&amp;&amp;&amp;lang=ru_RU&amp;scroll=true"></script>
-            </div>
+            <div class="contacts__map" id="map"></div>
             <div class="contacts__info contacts-info">
               <div class="contacts-info__text">У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам
                 в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.
               </div>
               <address class="contacts-info__adress">
-                <svg class="contacts-info__icon" width="18" height="18">
-                  <use xlink:href="img/sprite.svg#adress-point"></use>
+                <svg class="contacts-info__icon" width="18" height="22">
+                  <use xlink:href="img/sprite.svg#icon-pin"></use>
                 </svg>
                 <span>
                   г. Санкт Петербург, ул.&nbsp;Большая&nbsp;Конюшенная,&nbsp;19/8

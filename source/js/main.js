@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {Burger} from './modules/header/burger';
+import {initMap} from './modules/map';
 
 
 // ---------------------------------
@@ -22,6 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const burger = new Burger();
     burger.init();
     initModals();
+    initMap();
     const form = new Form();
     window.form = form;
     form.init();

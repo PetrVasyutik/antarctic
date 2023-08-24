@@ -43,4 +43,8 @@
 
 .contacts-info__icon {
   flex-shrink: 0;
+
+  @media (max-width: 1023px) {
+    margin-top: 5px;
+  }
 }
