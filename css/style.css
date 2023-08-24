@@ -1604,7 +1604,7 @@ button,
 }
 @media (max-width: 767px) {
   .footer {
-    padding: 40px 0;
+    padding: 37px 0;
   }
 }
 
@@ -1881,6 +1881,9 @@ button,
   }
 }
 
+.advantage__icon {
+  text-align: center;
+}
 @media (max-width: 1023px) {
   .advantage__icon {
     width: 36px;
@@ -1889,7 +1892,7 @@ button,
 }
 
 .advantage__title {
-  margin-top: 20px;
+  margin-top: 14px;
 }
 @media (max-width: 767px) {
   .advantage__title {
@@ -2363,13 +2366,13 @@ button,
 @media (max-width: 1023px) {
   .contacts {
     padding-top: 94px;
-    padding-bottom: 85px;
+    padding-bottom: 88px;
   }
 }
 @media (max-width: 767px) {
   .contacts {
     padding-top: 55px;
-    padding-bottom: 65px;
+    padding-bottom: 67px;
   }
 }
 
@@ -2407,6 +2410,7 @@ button,
         -ms-flex-order: 2;
             order: 2;
     height: 316px;
+    margin: 0 auto;
   }
 }
 
@@ -2499,6 +2503,11 @@ button,
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
+@media (max-width: 1023px) {
+  .contacts-info__icon {
+    margin-top: 5px;
+  }
+}
 
 .container-btn {
   margin-top: auto;
@@ -2533,7 +2542,7 @@ button,
 @media (max-width: 1023px) {
   .social {
     margin-left: 88px;
-    gap: 18px;
+    gap: 19px;
   }
 }
 @media (max-width: 767px) {
