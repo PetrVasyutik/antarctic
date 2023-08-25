@@ -1,5 +1,8 @@
 root: true
 
+globals:
+  ymaps: readonly
+
 parserOptions:
   ecmaVersion: 2015
   sourceType: 'module'
