@@ -18,17 +18,17 @@ export const initMap = () => {
           controls: [],
           zoom,
         });
-        map.geoObjects.add(new ymaps.Placemark(map.getCenter(), [
-          {
-            hintContent: 'г. Санкт Петербург, ул. Большая Конюшенная, 19/8',
-          },
-          {
-            iconImageHref: 'img/sprite.svg#icon-pin',
-            iconImageSize,
-            iconLayout: 'default#image',
-            iconShadow: false,
-          }
-        ]));
+        map.geoObjects.add(new ymaps.Placemark(map.getCenter(),
+            {
+              hintContent: 'г. Санкт Петербург, ул. Большая Конюшенная, 19/8',
+            },
+            {
+              iconImageHref: 'img/svg/icon-pin.svg',
+              iconImageSize,
+              iconLayout: 'default#image',
+              iconShadow: false,
+            }
+        ));
         map.behaviors.disable('scrollZoom');
       });
     }
