@@ -6,6 +6,18 @@
   margin-left: 347px;
   flex-shrink: 0;
 
+  @media (max-width: 1364px) {
+    margin-left: 250px;
+  }
+
+  @media (max-width: 1269px) {
+    margin-left: 100px;
+  }
+
+  @media (max-width: 1150px) {
+    margin-left: 5px;
+  }
+
   @media (max-width: 1023px) {
     margin-left: 88px;
     gap: 19px;

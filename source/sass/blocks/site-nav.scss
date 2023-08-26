@@ -1,6 +1,10 @@
 .site-nav {
   margin-left: 40px;
 
+  @media (max-width: 1150px) {
+    margin-left: 5px;
+  }
+
   @media (max-width: 1023px) {
     margin-left: 25px;
   }
@@ -16,6 +20,10 @@
   flex-wrap: wrap;
   gap: 34px;
   padding: 0;
+
+  @media (max-width: 1150px) {
+    gap: 20px;
+  }
 
   @media (max-width: 1023px) {
     gap: 23px;

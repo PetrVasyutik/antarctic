@@ -4,8 +4,7 @@
   background-image: url("../img/fon.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: -105px;
-  background-position-y: 0;
+  margin-top: -107px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/fon@2x.jpg");
@@ -19,6 +18,10 @@
     background-repeat: no-repeat;
     background-position-y: 6px;
     background-position-x: -20px;
+  }
+
+  @media (max-width: 1081px) {
+    margin-top: -109px;
   }
 
   @media (max-width: 767px) {
@@ -36,7 +39,7 @@
 
 .main-block__wrapper {
   padding-top: 270px;
-  padding-bottom: 280px;
+  padding-bottom: 282px;
   padding-left: 198px;
 
   @media (max-width: 1023px) {

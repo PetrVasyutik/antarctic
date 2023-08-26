@@ -631,6 +631,10 @@ button,
   cursor: pointer;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .btn:disabled {
   opacity: 0.5;
@@ -649,7 +653,7 @@ button,
   max-width: 240px;
 }
 .btn--form {
-  padding: 10px 46px;
+  padding: 12px 46px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1239,6 +1243,11 @@ button,
     margin-left: 237px;
   }
 }
+@media (max-width: 1100px) {
+  .header__nav {
+    margin-left: 80px;
+  }
+}
 @media (max-width: 1023px) {
   .header__nav {
     margin-left: 137px;
@@ -1283,9 +1292,9 @@ button,
           transform: translateX(0);
 }
 .header__list {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1294,9 +1303,6 @@ button,
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 @media (max-width: 767px) {
   .header__list {
@@ -1451,16 +1457,16 @@ button,
   display: inline-block;
   opacity: 1;
   position: absolute;
-  left: 61px;
+  left: 51px;
 }
 
 .footer {
   background-color: #011c40;
-  padding: 50px 0;
+  padding: 49px 0 52px 0;
 }
 @media (max-width: 767px) {
   .footer {
-    padding: 37px 0;
+    padding: 38px 0;
   }
 }
 
@@ -1493,8 +1499,7 @@ button,
   background-image: url("../img/fon.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: -105px;
-  background-position-y: 0;
+  margin-top: -107px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .main-block {
@@ -1510,6 +1515,11 @@ button,
     background-repeat: no-repeat;
     background-position-y: 6px;
     background-position-x: -20px;
+  }
+}
+@media (max-width: 1081px) {
+  .main-block {
+    margin-top: -109px;
   }
 }
 @media (max-width: 767px) {
@@ -1529,7 +1539,7 @@ button,
 
 .main-block__wrapper {
   padding-top: 270px;
-  padding-bottom: 280px;
+  padding-bottom: 282px;
   padding-left: 198px;
 }
 @media (max-width: 1023px) {
@@ -1594,9 +1604,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   gap: 44px;
 }
 @media (max-width: 1023px) {
@@ -1621,6 +1628,12 @@ button,
   max-width: 50%;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+  margin-top: 55px;
+}
+@media (max-width: 1200px) {
+  .journey__description {
+    margin-top: 25px;
+  }
 }
 @media (max-width: 1023px) {
   .journey__description {
@@ -1960,6 +1973,18 @@ button,
     background-repeat: no-repeat;
   }
 }
+@media (max-width: 1023px) {
+  .booking {
+    background-image: url("../img/fonform-tablet.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+@media (max-width: 767px) {
+  .booking {
+    background-image: url("../img/fonform-mobile.jpg");
+  }
+}
 
 .booking__wrapper {
   padding: 50px 0;
@@ -1972,7 +1997,7 @@ button,
   .booking__wrapper {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    padding: 37px 0 100px;
+    padding: 39px 0 100px;
     justify-items: center;
   }
 }
@@ -2052,9 +2077,16 @@ button,
 .booking__form {
   background-color: #011c40;
   max-width: 403px;
-  padding: 50px;
-  padding-top: 45px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 45px 50px 47px 50px;
   margin-left: 117px;
+}
+@media (max-width: 1130px) {
+  .booking__form {
+    margin-left: 40px;
+  }
 }
 @media (max-width: 1023px) {
   .booking__form {
@@ -2064,9 +2096,8 @@ button,
 }
 @media (max-width: 767px) {
   .booking__form {
-    max-width: 290px;
     margin-top: 32px;
-    padding: 34px 30px 43px 30px;
+    padding: 34px 30px 40px 30px;
   }
 }
 
@@ -2217,18 +2248,18 @@ button,
 
 .contacts {
   padding-top: 124px;
-  padding-bottom: 116px;
+  padding-bottom: 94px;
 }
 @media (max-width: 1023px) {
   .contacts {
     padding-top: 94px;
-    padding-bottom: 88px;
+    padding-bottom: 66px;
   }
 }
 @media (max-width: 767px) {
   .contacts {
     padding-top: 55px;
-    padding-bottom: 67px;
+    padding-bottom: 45px;
   }
 }
 
@@ -2353,6 +2384,7 @@ button,
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  margin-bottom: 22px;
 }
 
 .contacts-info__icon {
@@ -2369,6 +2401,10 @@ button,
   margin-top: auto;
 }
 
+.logo {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
 @media (max-width: 1023px) {
   .logo {
     width: 38px;
@@ -2394,6 +2430,21 @@ button,
   margin-left: 347px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+}
+@media (max-width: 1364px) {
+  .social {
+    margin-left: 250px;
+  }
+}
+@media (max-width: 1269px) {
+  .social {
+    margin-left: 100px;
+  }
+}
+@media (max-width: 1150px) {
+  .social {
+    margin-left: 5px;
+  }
 }
 @media (max-width: 1023px) {
   .social {
@@ -2428,6 +2479,11 @@ button,
 .site-nav {
   margin-left: 40px;
 }
+@media (max-width: 1150px) {
+  .site-nav {
+    margin-left: 5px;
+  }
+}
 @media (max-width: 1023px) {
   .site-nav {
     margin-left: 25px;
@@ -2448,6 +2504,11 @@ button,
       flex-wrap: wrap;
   gap: 34px;
   padding: 0;
+}
+@media (max-width: 1150px) {
+  .site-nav__list {
+    gap: 20px;
+  }
 }
 @media (max-width: 1023px) {
   .site-nav__list {

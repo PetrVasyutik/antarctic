@@ -15,7 +15,6 @@
 
 .journey__wrapper {
   display: flex;
-  align-items: center;
   gap: 44px;
 
   @media (max-width: 1023px) {
@@ -32,6 +31,11 @@
 .journey__description {
   max-width: 50%;
   flex-basis: 50%;
+  margin-top: 55px;
+
+  @media (max-width: 1200px) {
+    margin-top: 25px;
+  }
 
   @media (max-width: 1023px) {
     margin-top: -10px;

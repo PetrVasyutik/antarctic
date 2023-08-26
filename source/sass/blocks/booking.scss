@@ -9,6 +9,16 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+
+  @media (max-width: 1023px) {
+    background-image: url("../img/fonform-tablet.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: 767px) {
+    background-image: url("../img/fonform-mobile.jpg");
+  }
 }
 
 .booking__wrapper {
@@ -18,7 +28,7 @@
 
   @media (max-width: 1023px) {
     grid-template-columns: 1fr;
-    padding: 37px 0 100px;
+    padding: 39px 0 100px;
     justify-items: center;
   }
 
@@ -86,9 +96,13 @@
 .booking__form {
   background-color: $color-tangaroa;
   max-width: 403px;
-  padding: 50px;
-  padding-top: 45px;
+  height: max-content;
+  padding: 45px 50px 47px 50px;
   margin-left: 117px;
+
+  @media (max-width: 1130px) {
+    margin-left: 40px;
+  }
 
   @media (max-width: 1023px) {
     margin-top: 52px;
@@ -96,9 +110,8 @@
   }
 
   @media (max-width: 767px) {
-    max-width: 290px;
     margin-top: 32px;
-    padding: 34px 30px 43px 30px;
+    padding: 34px 30px 40px 30px;
   }
 }
 
