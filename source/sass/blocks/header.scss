@@ -1,5 +1,5 @@
 .header {
-  padding: 34px 0;
+  position: relative;
   z-index: 30;
   transition: opacity $trans-default;
 
@@ -23,16 +23,33 @@
 
   .header__container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 38px 103px;
+
+    @include vp-1023 {
+      padding: 30px 45px;
+    }
+
+    @include vp-767 {
+      padding: 20px 15px;
+    }
   }
 
   &__nav {
     flex-grow: 1;
     margin-left: 496px;
+    overflow-y: auto;
+    padding-top: 8px;
 
     @media (max-width: 1365px) {
       margin-left: 337px;
+      padding-top: 0;
     }
 
     @media (max-width: 1220px) {
@@ -101,6 +118,7 @@
 
   &__item {
     margin: 0;
+    margin-bottom: 10px;
 
     @media (max-width: 767px) {
       opacity: 0;
@@ -109,10 +127,10 @@
     }
 
     &:not(:last-child) {
-      margin: 0 25px 0 0;
+      margin-right: 25px;
 
       @media (max-width: 1023px) {
-        margin: 0;
+        margin-right: 0;
       }
 
       @media (max-width: 767px) {
@@ -126,6 +144,7 @@
     font-weight: 500;
     line-height: 19.5px;
     transition: opacity $trans-default;
+    margin-bottom: 10px;
 
     @media (max-width: 1023px) {
       font-size: 14px;

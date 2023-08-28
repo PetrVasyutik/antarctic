@@ -95,6 +95,10 @@
     right: 0;
     bottom: -10px;
 
+    @media (max-width: 767px) {
+      bottom: -2px;
+    }
+
     &.is-invalid {
       color: #ff0000;
     }

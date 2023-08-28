@@ -1,9 +1,5 @@
 .catalog-card {
   position: relative;
-  width: 100%;
-  margin: 0 auto;
-  max-width: 260px;
-  height: 100%;
   padding-top: calc(100% * 386 / 260);
 
   &:hover {
@@ -14,14 +10,10 @@
   }
 
   @media (max-width: 1023px) {
-    max-width: 309px;
-    max-height: 386px;
     padding-top: calc(100% * 386 / 309);
   }
 
   @media (max-width: 767px) {
-    max-width: 270px;
-    max-height: 386px;
     padding-top: calc(100% * 386 / 270);
   }
 }

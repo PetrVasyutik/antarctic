@@ -4,7 +4,6 @@
   background-image: url("../img/fon.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: -107px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/fon@2x.jpg");
@@ -12,28 +11,20 @@
     background-repeat: no-repeat;
   }
 
+  @media (max-width: 1023px) {
+    margin-top: -63px;
+  }
+
   @media (max-width: 794px) {
     background-image: url("../img/fontablet.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-y: 6px;
-    background-position-x: -20px;
-  }
-
-  @media (max-width: 1081px) {
-    margin-top: -109px;
   }
 
   @media (max-width: 767px) {
-    background-position-y: 60px;
-    background-position-x: 0;
-    margin-top: -120px;
-  }
-
-  @media (max-width: 467px) {
-    background-position-y: 60px;
-    background-position-x: -145px;
-    margin-top: -120px;
+    background-image: url("../img/fonmobile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
@@ -43,13 +34,13 @@
   padding-left: 198px;
 
   @media (max-width: 1023px) {
-    padding-top: 295px;
+    padding-top: 272px;
     padding-bottom: 273px;
     padding-left: 45px;
   }
 
   @media (max-width: 767px) {
-    padding-top: 235px;
+    padding-top: 199px;
     padding-bottom: 177px;
     padding-left: 15px;
   }

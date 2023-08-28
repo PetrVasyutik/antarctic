@@ -1,6 +1,14 @@
-const center = [59.938631, 30.323037];
-const iconImageSize = [18, 22];
-const zoom = 16;
+import L from 'leaflet';
+
+const ZOOM = 16;
+const WIDTH = 18;
+const HEIGHT = 22;
+const WIDTH_ANCHOR = 4;
+const HEIGHT_ANCHOR = 24;
+const BASE_COORDS = {
+  lat: 59.938631,
+  lng: 30.323037
+};
 
 export const initMap = () => {
   const mapElement = document.querySelector('#map');
@@ -8,30 +16,25 @@ export const initMap = () => {
     return;
   }
 
-  const scriptElement = document.createElement('script');
-  scriptElement.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
-  scriptElement.addEventListener('load', () => {
-    if (typeof ymaps !== 'undefined') {
-      ymaps.ready(() => {
-        const map = new ymaps.Map('map', {
-          center,
-          controls: [],
-          zoom,
-        });
-        map.geoObjects.add(new ymaps.Placemark(map.getCenter(),
-            {
-              hintContent: 'г. Санкт Петербург, ул. Большая Конюшенная, 19/8',
-            },
-            {
-              iconImageHref: 'img/svg/icon-pin.svg',
-              iconImageSize,
-              iconLayout: 'default#image',
-              iconShadow: false,
-            }
-        ));
-        map.behaviors.disable('scrollZoom');
-      });
-    }
+  // Добавляем карту
+  const map = L.map('map', { scrollWheelZoom: false }).setView(BASE_COORDS, ZOOM);
+
+  // Добавляем слой с нужной картой
+  L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+    minZoom: 10,
+    subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+  }).addTo(map);
+
+  // Создаем главную метку
+  const pinIcon = L.marker(BASE_COORDS, {
+    icon: L.icon({
+      iconUrl: 'img/svg/icon-pin.svg',
+      iconSize: [WIDTH, HEIGHT],
+      iconAnchor: [WIDTH_ANCHOR, HEIGHT_ANCHOR]
+    })
   });
-  document.body.append(scriptElement);
+
+  // Добавляем метку на карту
+  pinIcon.addTo(map);
+  mapElement.querySelector('.leaflet-control-attribution').style.visibility = 'hidden';
 };
