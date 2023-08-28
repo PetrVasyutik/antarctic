@@ -1963,9 +1963,10 @@ button,
 }
 .header.is-open .header__logo {
   opacity: 1;
-  color: #011c40;
+  -webkit-filter: invert(1);
+          filter: invert(1);
   z-index: 3000;
-  margin-left: 50px;
+  margin-left: 36px;
 }
 .header.is-hidden {
   -webkit-transform: translateY(-100%);
@@ -2229,17 +2230,6 @@ button,
   height: 100%;
   background: #011c40;
   opacity: 0.3;
-}
-
-.header__logo-mobile {
-  z-index: 100;
-  display: none;
-}
-.is-open .header__logo-mobile {
-  display: none;
-  opacity: 1;
-  position: absolute;
-  left: 51px;
 }
 
 .footer {
