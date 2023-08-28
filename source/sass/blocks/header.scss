@@ -13,7 +13,10 @@
 
   &.is-open {
     .header__logo {
-      opacity: 0;
+      opacity: 1;
+      color: $color-tangaroa;
+      z-index: 3000;
+      margin-left: 50px;
     }
   }
 
@@ -101,13 +104,19 @@
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     flex-wrap: wrap;
+    gap: 8px;
+
+    @media (max-width: 1023px) {
+      gap: 23px;
+    }
 
     @media (max-width: 767px) {
       flex-direction: column;
       margin: 0 0 70px 0;
       max-width: unset;
+      gap: 0;
     }
 
     @media (max-width: 767px) {
@@ -239,9 +248,10 @@
   display: none;
 
   .is-open & {
-    display: inline-block;
+    display: none;
     opacity: 1;
     position: absolute;
     left: 51px;
   }
 }
+

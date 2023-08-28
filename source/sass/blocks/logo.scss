@@ -1,5 +1,6 @@
 .logo {
   flex-shrink: 0;
+  color: $color-default-white;
 
   @media (max-width: 1023px) {
     width: 38px;
