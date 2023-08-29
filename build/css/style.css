@@ -2244,7 +2244,7 @@ button,
 
 .footer {
   background-color: #011c40;
-  padding: 49px 0 52px 0;
+  padding: 49px 0 53px 0;
 }
 @media (max-width: 767px) {
   .footer {
@@ -2954,7 +2954,7 @@ button,
   border-color: #ff1553;
 }
 .checkbox [type=checkbox]:focus-visible + .checkbox__mark {
-  background-color: #011c40;
+  background-color: #ffffff;
   opacity: 0.8;
 }
 @media (max-width: 1023px) {
