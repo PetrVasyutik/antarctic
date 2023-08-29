@@ -2,14 +2,8 @@
   position: relative;
   padding-top: calc(100% * 386 / 260);
 
-  &:hover {
-    .catalog-card__front {
-      opacity: 0;
-      z-index: 0;
-    }
-  }
-
-  &:focus {
+  &:hover,
+  &:focus-within {
     .catalog-card__front {
       opacity: 0;
       z-index: 0;
