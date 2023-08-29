@@ -35,6 +35,10 @@
     margin: 0 auto;
     padding: 38px 103px;
 
+    .is-open & {
+      position: fixed;
+    }
+
     @include vp-1023 {
       padding: 30px 45px;
     }
