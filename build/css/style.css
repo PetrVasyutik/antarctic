@@ -2618,6 +2618,10 @@ button,
   opacity: 0;
   z-index: 0;
 }
+.catalog-card:focus .catalog-card__front {
+  opacity: 0;
+  z-index: 0;
+}
 @media (max-width: 1023px) {
   .catalog-card {
     padding-top: 124.9190938511%;

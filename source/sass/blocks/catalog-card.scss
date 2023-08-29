@@ -9,6 +9,13 @@
     }
   }
 
+  &:focus {
+    .catalog-card__front {
+      opacity: 0;
+      z-index: 0;
+    }
+  }
+
   @media (max-width: 1023px) {
     padding-top: calc(100% * 386 / 309);
   }
