@@ -2222,7 +2222,7 @@ button,
   transition: opacity 0.3s ease;
   pointer-events: none;
   position: absolute;
-  right: -3px;
+  right: 4px;
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
@@ -2666,6 +2666,11 @@ button,
   height: 100%;
   z-index: 1;
   overflow-y: auto;
+}
+@media (min-width: 1024px) and (max-width: 1100px) {
+  .catalog-card__back {
+    padding: 17px 10px 35px 10px;
+  }
 }
 @media (max-width: 1023px) {
   .catalog-card__back {
